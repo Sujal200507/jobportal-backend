@@ -48,6 +48,6 @@ app.get('/health', (req, res) => res.status(200).send('OK'));
 console.log("Updated");
 
 // Start server
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`✅ Server running at port ${PORT}`);
 });
