@@ -41,7 +41,7 @@ app.use("/api/v1/company", companyRoute);
 app.use("/api/v1/job", jobRoute);
 app.use("/api/v1/application", applicationRoute);
 // index.js or server.js
-console.log("Updated backend working!");
+console.log("Updated");
 
 // Start server
 app.listen(PORT, () => {
