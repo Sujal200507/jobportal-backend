@@ -40,6 +40,10 @@ app.use("/api/v1/user", userRoute);
 app.use("/api/v1/company", companyRoute);
 app.use("/api/v1/job", jobRoute);
 app.use("/api/v1/application", applicationRoute);
+
+// Health check endpoint for Render
+app.get('/health', (req, res) => res.status(200).send('OK'));
+
 // index.js or server.js
 console.log("Updated");
 
