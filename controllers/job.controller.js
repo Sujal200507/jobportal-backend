@@ -36,6 +36,7 @@ export const postJob = async (req, res) => {
     }
 };
 export const getAllJobs = async (req, res) => {
+    console.log("GET /api/v1/job/all called");
     try {
         const keyword = req.query.keyword || "";
         
@@ -55,7 +56,7 @@ export const getAllJobs = async (req, res) => {
 
         return res.status(200).json({ jobs, success: true });
     } catch (error) {
-        console.log(error);
+        console.error("Error in getAllJobs:", error);
         return res.status(500).json({ message: "Failed to get jobs", success: false });
     }
 }
